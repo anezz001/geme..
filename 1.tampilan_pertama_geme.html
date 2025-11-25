@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Game List</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: #0f0f0f;
+        font-family: Arial, sans-serif;
+        color: white;
+        overflow-x: hidden; /* Tidak bisa geser kanan kiri */
+    }
+
+    /* HEADER */
+    .header {
+        width: 100%;
+        padding: 20px 0;
+        background: #1a1a1a;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        box-shadow: 0 0 10px #000;
+    }
+
+    /* TOMBOL MUSIK (NORMAL, TIDAK PANJANG) */
+    .music-btn {
+        background: #d9d9d9;   /* putih ke item */
+        color: #000;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 12px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* GRID GAME */
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .card {
+        background: #1d1d1d;
+        border-radius: 15px;
+        padding: 10px;
+        text-align: center;
+        box-shadow: 0 0 10px #000;
+        cursor: pointer;
+        transition: transform .2s;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .card img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .card-title {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #f2f2f2;
+    }
+</style>
+</head>
+<body>
+
+<!-- HEADER TANPA TULISAN -->
+<div class="header">
+    <button class="music-btn" onclick="toggleMusic()">WELCOME TO ANZMK</button>
+</div>
+
+<audio id="bgMusic">
+    <source src="https://l.top4top.io/m_36168a5es0.mp3" type="audio/mp3">
+</audio>
+
+<!-- LIST GAME -->
+<div class="container">
+
+    <div class="card" onclick="location.href='https://anezz001.github.io/1.mmkkk/1Tebak²_anka.html'">
+        <img src="https://l.top4top.io/p_3615ot4130.jpg">
+        <div class="card-title">tebak angka</div>
+    </div>
+
+    <div class="card" onclick="location.href='https://anezz001.github.io/2mmkkk/2tictac.html'">
+        <img src="https://a.top4top.io/p_361542se41.jpg">
+        <div class="card-title">tic tac</div>
+    </div>
+
+    <div class="card" onclick="location.href='https://anezz001.github.io/3mmkkk/3pasti_sad.html'">
+        <img src="https://b.top4top.io/p_3615xg1512.jpg">
+        <div class="card-title">obat luka</div>
+    </div>
+
+<div class="card" onclick="location.href='https://anezz001.github.io/4mmkk/4geme_judoll.html'">
+        <img src="https://c.top4top.io/p_3615m41rr3.jpg">
+        <div class="card-title">judol feke</div>
+    </div>
+
+<div class="card" onclick="location.href='https://anezz001.github.io/5mmkkk/5mendapat_bend.html'">
+        <img src="https://d.top4top.io/p_3615i37og4.jpg">
+        <div class="card-title">tep-tep tombol</div>
+    </div>
+
+<div class="card" onclick="location.href='https://anezz001.github.io/6mmkkk/6perhitungan.html'">
+        <img src="https://e.top4top.io/p_3615r3k2u5.jpg">
+        <div class="card-title">perhitungan</div>
+    </div>
+
+</div>
+
+<script>
+let music = document.getElementById("bgMusic");
+let isPlaying = false;
+
+function toggleMusic() {
+    if (!isPlaying) {
+        music.play();
+        isPlaying = true;
+    } else {
+        music.pause();
+        isPlaying = false;
+    }
+}
+</script>
+</body>
+</html>
